@@ -53,9 +53,12 @@ Follow this tutorial to install WSL: https://learn.microsoft.com/en-us/windows/w
 mySQL workbench is used to run the SQL server. 
 You can run a mySQL server using WSL too, but this tutorial assumes you are using mySQL workbench.
 Follow the instructions here for windows: https://dev.mysql.com/downloads/windows/installer/.
+
 Download the "Developer Default".
+
 If you have to name the database at any point, choose "illini-cc" as the name, otherwise you will need to change the "DEV_DB_NAME" variable in the ".env" file in the backend to match.
-Remember the password you set,the "DEV_DB_PASSWORD" variable in the ".env" file in the backend has to match what you set.
+
+Remember the password you set, the "DEV_DB_PASSWORD" variable in the ".env" file in the backend has to match what you set.
 
 Once you finish installing and setting up the local SQL instance using mySQL workbench so you see this screen:
 
