@@ -54,11 +54,26 @@ mySQL workbench is used to run the SQL server.
 You can run a mySQL server using WSL too, but this tutorial assumes you are using mySQL workbench.
 Follow the instructions here for windows: https://dev.mysql.com/downloads/windows/installer/.
 Download the "Developer Default".
-Remember the password you set, this will have to be changed in the ".env" file in the backend.
+If you have to name the database at any point, choose "illini-cc" as the name, otherwise you will need to change the "DEV_DB_NAME" variable in the ".env" file in the backend to match.
+Remember the password you set,the "DEV_DB_PASSWORD" variable in the ".env" file in the backend has to match what you set.
 
-You will need to create an SQL server using mySQL workbench which the frontend and backend will connect to.
-The "illini-cc-dump.sql" in the sql folder has the entire credit card database which you can just execute on the sql server you made.
-Once you have the sql database running with the schema provided in the sql folder, you then need to download nodejs.
+Once you finish installing and setting up the local SQL instance using mySQL workbench so you see this screen:
+
+![mysql-1](mysql-1.png)
+
+Click the folder in the query window:
+
+![mysql-2](mysql-2.png)
+
+open the "illini-cc-dump.sql" file in the sql folder. Then click the lightning bolt to execute the script:
+
+![mysql-3](mysql-3.png)
+
+then click the refresh button in the schemas window:
+
+![mysql-4](mysql-4.png)
+
+This completes the sql database setup.
 
 to download nodejs, follow the instructions here: https://github.com/nodesource/distributions
 
