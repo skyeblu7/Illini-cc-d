@@ -73,6 +73,10 @@ then click the refresh button in the schemas window:
 
 ![mysql-4](mysql-4.png)
 
+Make sure the Illini-cc database shows up:
+
+![mysql-5](mysql-5.png)
+
 This completes the sql database setup.
 
 to download nodejs, follow the instructions here: https://github.com/nodesource/distributions
