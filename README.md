@@ -54,6 +54,7 @@ mySQL workbench is used to run the SQL server.
 You can run a mySQL server using WSL too, but this tutorial assumes you are using mySQL workbench.
 Follow the instructions here for windows: https://dev.mysql.com/downloads/windows/installer/.
 Download the "Developer Default".
+Remember the password you set, this will have to be changed in the ".env" file in the backend.
 
 You will need to create an SQL server using mySQL workbench which the frontend and backend will connect to.
 The "illini-cc-dump.sql" in the sql folder has the entire credit card database which you can just execute on the sql server you made.
