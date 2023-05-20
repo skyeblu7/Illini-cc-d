@@ -95,8 +95,11 @@ npm start
 The same command can be used in the "frontend" folder (in a different terminal):
 
 ```
+npm install
 npm start
 ```
+
+note that you only have to run "npm install" once, then to start any other time, just run "npm start"
 
 Once both the frontend and backend are running, you should be able to see the website running on port 3000. 
 Just go to this url: "http://localhost:3000".
