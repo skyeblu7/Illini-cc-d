@@ -14,7 +14,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![picture here]
+![frontend-pic](frontend-pic.png)
+
+![cards-pic](cards-pic.png)
 
 
 This is a web interface (frontend with backend) integrated with a database for credit cards.
@@ -68,28 +70,42 @@ Click the folder in the query window:
 
 ![mysql-2](mysql-2.png)
 
-open the "illini-cc-dump.sql" file in the sql folder. Then click the lightning bolt to execute the script:
+Open the "schema.sql" file in the sql folder. Then click on the lightnig bolt to execute the script.
 
 ![mysql-3](mysql-3.png)
 
-then click the refresh button in the schemas window:
+make sure the tables now exist by pressing the refresh button in the schemas window:
 
 ![mysql-4](mysql-4.png)
 
-Make sure the Illini-cc database shows up:
+Now open the "illini-cc-dump.sql" file in the sql folder. Then click the lightning bolt again.
+Check to make sure data was added by opening a new sql tab and executing the following command "SELECT * From credit_cards"
 
 ![mysql-5](mysql-5.png)
 
+Now we have to allow connections from our WSL backend. Click on "Server->Users and Privileges"
+
+![mysql-6](mysql-6.png)
+
+click on the "root" user and change "Limit to Hosts matching:" to the ip address of your WSL connection. Or just use "%" to allow all connections.
+
+![mysql-7](mysql-7.png)
+
 This completes the sql database setup.
+
+Next we need to change the ".env" file in the backend. Change the DEV_DB_HOST to your WSL's ip address.
+
+![env-pic](env-pic.png)
 
 to download nodejs, follow the instructions here: https://github.com/nodesource/distributions
 
-Once you have nodejs, run the following command:
+Once you have nodejs, run the following command in the "backend" folder:
 ```
 npm install
 ```
 
-Once this is done you can run the following command in the "backend" folder to start the backend:
+
+Once this is done you can run the following command (also in backend) to start the backend:
 
 ```
 npm start
@@ -104,15 +120,22 @@ npm start
 
 note that you only have to run "npm install" once, then to start any other time, just run "npm start"
 
-Once both the frontend and backend are running, you should be able to see the website running on port 3000. 
-Just go to this url: "http://localhost:3000".
+The frontend should open up automatically at "http://localhost:3000".
+
 
 # Design
 
+The frontend and backend allow us to add, delete, modify and search cards in the database. 
 
+![modify-delete](modify-delete.png)
 
+![create](create.png)
 
+![search](search.png)
 
+The database also keeps track of how many times a card is clicked on and the website uses these statistics to show you the current trending cards and also shows a graph of the most viewed (clicked) cards.
+
+![trending](trending.png)
 
 
 
